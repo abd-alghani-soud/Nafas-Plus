@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nafas/features/splash_onboarding/presentation/screens/splash_page.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nafas/features/auth/presentation/screens/login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,6 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: SplashPage());
+    return ScreenUtilInit(
+      designSize: Size(375, 812),
+      child: MaterialApp(debugShowCheckedModeBanner: false, home: LoginPage()),
+    );
   }
 }
