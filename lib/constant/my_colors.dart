@@ -12,4 +12,7 @@ class MyColors {
 
   // gray box
   static const Color gray = Color(0xFF2f2f2f);
+  static const Color grayAccent = Color(0xFFafb9ba);
+
+  static const Color white = Color(0xffffffff);
 }
