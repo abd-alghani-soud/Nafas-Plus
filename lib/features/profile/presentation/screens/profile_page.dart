@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nafas/constant/my_icons.dart';
 import 'package:nafas/constant/my_string.dart';
-import 'package:nafas/custom_background.dart';
+import 'package:nafas/widgets/custom_background.dart';
 import 'package:nafas/features/profile/presentation/widgets/info_Profile.dart';
 import 'package:nafas/features/profile/presentation/widgets/logout_button.dart';
 

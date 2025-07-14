@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nafas/constant/my_images.dart';
-import 'constant/my_colors.dart';
+import '../constant/my_colors.dart';
 
 class CustomBackground extends StatelessWidget {
   const CustomBackground({super.key, required this.widget});
