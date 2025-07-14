@@ -24,7 +24,6 @@ class MyString {
   static String titleSignUp = 'Create your free account in seconds';
   static String titleSignUp2 = 'Start your health journey today';
 
-
   // ForgotPassword
   static String forgotPassword = 'Forgot Password';
   static String sendEmail = 'Send Email';
@@ -55,4 +54,12 @@ class MyString {
   static String childSpecialist = "Child Specialist";
   static String generalPhysician = "General Physician";
   static String dermatology = "Dermatology";
+
+  // profile
+  static String myProfile = 'My Profile';
+  static String records = 'Medical Records';
+  static String privacy = 'Privacy & Policy';
+  static String help = 'Help Center';
+  static String settings = 'Settings';
+  static String logout = 'Logout';
 }

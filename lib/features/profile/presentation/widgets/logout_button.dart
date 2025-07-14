@@ -1,0 +1,33 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:nafas/constant/my_icons.dart';
+import 'package:nafas/constant/my_string.dart';
+
+class LogoutButton extends StatelessWidget {
+  const LogoutButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      borderRadius: BorderRadius.circular(8),
+      onTap: () {},
+      child: SizedBox(
+        width: 212.w,
+        height: 61.h,
+        child: Row(
+          children: [
+            SizedBox(width: 12.w),
+            SvgPicture.asset(MyIcons.logout,width: 28,height: 28,),
+            SizedBox(width: 20.w),
+            Text(
+              MyString.logout,
+              style: TextStyle(fontSize: 28.sp, color: Color(0xffff0000)),
+            ),
+            SizedBox(width: 12.w),
+          ],
+        ),
+      ),
+    );
+  }
+}
