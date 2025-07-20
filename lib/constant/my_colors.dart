@@ -7,8 +7,8 @@ class MyColors {
 
   // Visual greens
   static const Color greenNeon = Color(0xFF00FF66);
-  static const Color greenAccent = Color(0xFF6DE016);
-  static const Color blueAccent = Color(0xFF0FE099);
+  static const Color greenAccent = Color(0xFF75E00A);
+  static const Color blueAccent = Color(0xFF0AE0A0);
 
   // gray box
   static const Color gray = Color(0xFF2f2f2f);
