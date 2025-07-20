@@ -18,7 +18,7 @@ class LogoutButton extends StatelessWidget {
         child: Row(
           children: [
             SizedBox(width: 12.w),
-            SvgPicture.asset(MyIcons.logout,width: 28,height: 28,),
+            SvgPicture.asset(MyIcons.logout,width: 30,height: 30,),
             SizedBox(width: 20.w),
             Text(
               MyString.logout,
