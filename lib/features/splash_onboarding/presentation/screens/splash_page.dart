@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:nafas/features/auth/presentation/screens/login_page.dart';
-
 import '../../../../constant/my_colors.dart';
 
 class SplashPage extends StatefulWidget {
@@ -20,6 +18,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
+
     Future.delayed(const Duration(seconds: 3), () {
       if (!mounted) return;
       setState(() {
@@ -47,60 +46,97 @@ class _SplashPageState extends State<SplashPage> {
             Positioned(
               top: 0,
               left: 0,
-              child: Image.asset('assets/images/image1.png'),
+              child: Image.asset(
+                'assets/images/image1.png',
+                fit: BoxFit.cover,
+                width: 120.w,
+                errorBuilder: (context, error, stackTrace) {
+                  return const SizedBox.shrink();
+                },
+              ),
             ),
             Positioned(
               right: 0,
               bottom: 0,
-              child: Image.asset('assets/images/image.png'),
+              child: Image.asset(
+                'assets/images/image.png',
+                fit: BoxFit.cover,
+                width: 120.w,
+                errorBuilder: (context, error, stackTrace) {
+                  return const SizedBox.shrink();
+                },
+              ),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Center(
-                  child:
-                      isFading
-                          ? SvgPicture.asset(
-                                'assets/images/Frame.svg',
-                                height: 110.h,
-                                color: MyColors.greenNeon,
-                              )
-                              .animate(
-                                onPlay:
-                                    (controller) =>
-                                        controller.repeat(reverse: true),
-                              )
-                              .fade(duration: 1.seconds)
-                          : SvgPicture.asset(
-                            'assets/images/Frame.svg',
-                            height: 110.h,
-                            color: MyColors.greenNeon,
-                          ),
-                ),
-                SizedBox(height: 25.h),
-                isFading
-                    ? Text(
-                          'Nafas+',
-                          style: GoogleFonts.aBeeZee(
-                            fontSize: 30.h,
-                            fontWeight: FontWeight.bold,
-                            color: MyColors.greenNeon,
-                          ),
-                        )
-                        .animate(
-                          onPlay:
-                              (controller) => controller.repeat(reverse: true),
-                        )
-                        .fade(duration: 1.seconds)
-                    : Text(
-                      'Nafas+',
-                      style: GoogleFonts.aBeeZee(
-                        fontSize: 30.h,
-                        fontWeight: FontWeight.bold,
-                        color: MyColors.greenNeon,
+
+            Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  isFading
+                      ? Image.asset(
+                            'assets/images/klogo.jpg',
+                            height: 350.h,
+                            fit: BoxFit.contain,
+                            errorBuilder: (context, error, stackTrace) {
+                              return SizedBox(
+                                height: 120.h,
+                                width: 120.h,
+                                child: Icon(
+                                  Icons.broken_image,
+                                  size: 48.r,
+                                  color: MyColors.greenNeon,
+                                ),
+                              );
+                            },
+                          )
+                          .animate(
+                            onPlay:
+                                (controller) =>
+                                    controller.repeat(reverse: true),
+                          )
+                          .fade(duration: 1.seconds)
+                      : Image.asset(
+                        'assets/images/klogo.jpg',
+                        height: 350.h,
+                        fit: BoxFit.contain,
+                        errorBuilder: (context, error, stackTrace) {
+                          return SizedBox(
+                            height: 120.h,
+                            width: 120.h,
+                            child: Icon(
+                              Icons.broken_image,
+                              size: 48.r,
+                              color: MyColors.greenNeon,
+                            ),
+                          );
+                        },
                       ),
-                    ),
-              ],
+                  SizedBox(height: 5.h),
+                  isFading
+                      ? Text(
+                            'Nafas+',
+                            style: GoogleFonts.aBeeZee(
+                              fontSize: 34.sp,
+                              fontWeight: FontWeight.bold,
+                              color: MyColors.greenNeon,
+                            ),
+                          )
+                          .animate(
+                            onPlay:
+                                (controller) =>
+                                    controller.repeat(reverse: true),
+                          )
+                          .fade(duration: 1.seconds)
+                      : Text(
+                        'Nafas+',
+                        style: GoogleFonts.aBeeZee(
+                          fontSize: 34.sp,
+                          fontWeight: FontWeight.bold,
+                          color: MyColors.greenNeon,
+                        ),
+                      ),
+                ],
+              ),
             ),
           ],
         ),

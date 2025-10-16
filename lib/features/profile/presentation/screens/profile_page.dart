@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nafas/constant/my_icons.dart';
 import 'package:nafas/constant/my_images.dart';
 import 'package:nafas/constant/my_string.dart';
-import 'package:nafas/features/profile/presentation/screens/my_profile_page.dart';
+import 'package:nafas/features/auth/presentation/screens/login_page.dart';
 import 'package:nafas/widgets/custom_background.dart';
 import 'package:nafas/features/profile/presentation/widgets/info_Profile.dart';
 import 'package:nafas/features/profile/presentation/widgets/logout_button.dart';
@@ -28,27 +28,27 @@ class ProfilePage extends StatelessWidget {
                 CustomProfileButton(
                   name: MyString.myProfile,
                   iconName: MyIcons.profile,
-                  page: MyProfilePage(),
+                  page: LoginPage(),
                 ),
                 CustomProfileButton(
                   name: MyString.records,
                   iconName: MyIcons.records,
-                  page: MyProfilePage(),
+                  page: LoginPage(),
                 ),
                 CustomProfileButton(
                   name: MyString.privacy,
                   iconName: MyIcons.privacy,
-                  page: MyProfilePage(),
+                  page: LoginPage(),
                 ),
                 CustomProfileButton(
                   name: MyString.help,
                   iconName: MyIcons.helpCenter,
-                  page: MyProfilePage(),
+                  page: LoginPage(),
                 ),
                 CustomProfileButton(
                   name: MyString.settings,
                   iconName: MyIcons.setting,
-                  page: MyProfilePage(),
+                  page: LoginPage(),
                 ),
                 Spacer(),
                 LogoutButton(),
@@ -56,7 +56,11 @@ class ProfilePage extends StatelessWidget {
               ],
             ),
             Spacer(),
-            Image(image: AssetImage(MyImages.pages)),
+            Image(
+              width: MediaQuery.of(context).size.width*0.2,
+              height: MediaQuery.of(context).size.height,
+              image: AssetImage(MyImages.p1),
+            ),
           ],
         ),
       ),

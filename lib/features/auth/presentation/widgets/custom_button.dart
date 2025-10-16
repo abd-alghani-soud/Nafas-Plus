@@ -6,11 +6,7 @@ class CustomButton extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
 
-  const CustomButton({
-    super.key,
-    required this.text,
-    required this.onPressed,
-  });
+  const CustomButton({super.key, required this.text, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +16,6 @@ class CustomButton extends StatelessWidget {
         width: double.infinity,
         padding: const EdgeInsets.symmetric(vertical: 16),
         decoration: BoxDecoration(
-
           gradient: const LinearGradient(
             colors: [MyColors.blueAccent, MyColors.greenAccent],
             begin: Alignment.topLeft,
@@ -31,7 +26,7 @@ class CustomButton extends StatelessWidget {
         child: Center(
           child: Text(
             text,
-            style:  TextStyle(
+            style: TextStyle(
               color: Colors.black,
               fontSize: 18.sp,
               fontWeight: FontWeight.bold,

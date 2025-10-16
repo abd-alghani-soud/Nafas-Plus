@@ -5,6 +5,7 @@ import 'package:nafas/constant/my_string.dart';
 import 'package:nafas/features/auth/presentation/screens/sign_up_page.dart';
 import 'package:nafas/features/auth/presentation/widgets/custom_button.dart';
 import 'package:nafas/features/auth/presentation/widgets/custom_text_field.dart';
+import 'package:nafas/features/home/presentation/screens/home_page.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
@@ -83,6 +84,10 @@ class LoginPage extends StatelessWidget {
                       CustomButton(
                         text: "Login",
                         onPressed: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (context) => HomePage()),
+                          );
                           print("Login!!!!!!!!!!");
                         },
                       ),
