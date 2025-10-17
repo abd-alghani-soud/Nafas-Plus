@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nafas/constant/my_colors.dart';
+import 'package:nafas/core/constants/my_colors.dart';
 
 class CustomButton extends StatelessWidget {
   final String text;

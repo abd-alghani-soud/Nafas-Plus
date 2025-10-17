@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:nafas/features/auth/presentation/screens/login_page.dart';
-import '../../../../constant/my_colors.dart';
+import '../../../../core/constants/my_colors.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
