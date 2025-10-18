@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Caloris extends StatelessWidget {
-  const Caloris({super.key});
+class CaloriesPage extends StatelessWidget {
+  const CaloriesPage({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nafas/core/constants/my_colors.dart';
-import 'package:nafas/features/home/presentation/calculators.dart';
-import 'package:nafas/features/home/presentation/diseases.dart';
+import 'package:nafas/features/home/presentation/screens/calculators_page.dart';
+import 'package:nafas/features/home/presentation/screens/diseases_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -46,7 +46,7 @@ class HomePage extends StatelessWidget {
           children: [
             GestureDetector(
               onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder:(context)=> Calculators()));
+                Navigator.push(context, MaterialPageRoute(builder:(context)=> CalculatorsPage()));
               },
               child:
                 Container(

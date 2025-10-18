@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nafas/core/constants/my_colors.dart';
 import 'package:nafas/core/constants/my_string.dart';
+import 'package:nafas/features/auth/presentation/screens/complete_information.dart';
 import 'package:nafas/features/auth/presentation/widgets/custom_button.dart';
 import 'package:nafas/features/auth/presentation/widgets/custom_text_field.dart';
 
@@ -45,7 +46,6 @@ class SignUpPage extends StatelessWidget {
                       Text(
                         MyString.createAccount,
                         style: TextStyle(
-                          color: Colors.white,
                           fontSize: 32.sp,
                           fontWeight: FontWeight.bold,
                         ),
@@ -103,6 +103,12 @@ class SignUpPage extends StatelessWidget {
                       CustomButton(
                         text: "Sign up",
                         onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => CompleteInformation(),
+                            ),
+                          );
                           print("Sign up!!!!!!!!!!");
                         },
                       ),
@@ -113,7 +119,6 @@ class SignUpPage extends StatelessWidget {
                           Text(
                             MyString.alreadyHaveAnAccount,
                             style: TextStyle(
-                              color: MyColors.white,
                               fontSize: 15.sp,
                             ),
                           ),

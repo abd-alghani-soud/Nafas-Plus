@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:nafas/features/home/presentation/bmi.dart';
-import 'package:nafas/features/home/presentation/caloris.dart';
-import 'package:nafas/features/home/presentation/fats.dart';
-import 'package:nafas/features/home/presentation/water.dart';
+import 'package:nafas/features/home/presentation/screens/bmi_page.dart';
+import 'package:nafas/features/home/presentation/screens/calories_page.dart';
 
-class Calculators extends StatelessWidget {
-  const Calculators ({super.key});
+import 'package:nafas/features/home/presentation/screens/fats_page.dart';
+import 'package:nafas/features/home/presentation/screens/water_page.dart';
+
+class CalculatorsPage extends StatelessWidget {
+  const CalculatorsPage ({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,7 @@ class Calculators extends StatelessWidget {
             child:
             GestureDetector(
               onTap: (){
-                Navigator.push(context,MaterialPageRoute(builder:(context)=>Bmi() ));
+                Navigator.push(context,MaterialPageRoute(builder:(context)=>BmiPage() ));
               },
               child: Container(
                 height: 100,
@@ -70,7 +71,7 @@ class Calculators extends StatelessWidget {
             child:
             GestureDetector(
               onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>Caloris()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>CaloriesPage()));
               },
               child: Container(
                 height: 100,
