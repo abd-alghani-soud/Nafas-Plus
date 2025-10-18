@@ -7,10 +7,10 @@ class MyColors {
 
   // Visual greens
   static const Color greenNeon = Color(0xFF9de96d);
-  static const Color greenAccent =
+  static const Color greenAccent = Color(0xFF4cb050);
   // Colors.green;
   //  Color.fromARGB(255, 29, 175, 18);
-  Color(0xFF4cb050);
+
   static const Color blueAccent = Color(0xFF0AE0A0);
 
   // gray box

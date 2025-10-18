@@ -24,12 +24,18 @@ class SignUpPage extends StatelessWidget {
             Positioned(
               top: 0,
               left: 0,
-              child: Image(image: AssetImage('assets/images/image1.png')),
+              child: Image(
+                image: AssetImage('assets/images/image1.png'),
+                width: 200,
+              ),
             ),
             Positioned(
               right: 0,
               bottom: 0,
-              child: Image(image: AssetImage('assets/images/image.png')),
+              child: Image(
+                image: AssetImage('assets/images/image.png'),
+                width: 200,
+              ),
             ),
             SingleChildScrollView(
               child: SafeArea(
@@ -118,9 +124,7 @@ class SignUpPage extends StatelessWidget {
                         children: [
                           Text(
                             MyString.alreadyHaveAnAccount,
-                            style: TextStyle(
-                              fontSize: 15.sp,
-                            ),
+                            style: TextStyle(fontSize: 15.sp),
                           ),
                           SizedBox(width: 8.w),
                           GestureDetector(
