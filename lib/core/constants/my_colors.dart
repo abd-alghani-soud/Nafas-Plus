@@ -3,11 +3,14 @@ import 'package:flutter/material.dart';
 class MyColors {
   //  backgrounds
   static const Color backgroundDark1 = Color(0xFF1E1E1E);
-  static const Color backgroundDark2 = Color(0xFF070707);
+  static const Color backgroundDark2 = Color(0xFF010101);
 
   // Visual greens
   static const Color greenNeon = Color(0xFF9de96d);
-  static const Color greenAccent = Color(0xFF75E00A);
+  static const Color greenAccent =
+  // Colors.green;
+  //  Color.fromARGB(255, 29, 175, 18);
+  Color(0xFF4cb050);
   static const Color blueAccent = Color(0xFF0AE0A0);
 
   // gray box

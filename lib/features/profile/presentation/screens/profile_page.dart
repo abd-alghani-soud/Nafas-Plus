@@ -4,7 +4,7 @@ import 'package:nafas/core/constants/my_icons.dart';
 import 'package:nafas/core/constants/my_images.dart';
 import 'package:nafas/core/constants/my_string.dart';
 import 'package:nafas/features/auth/presentation/screens/login_page.dart';
-import 'package:nafas/widgets/custom_background.dart';
+import 'package:nafas/core/widgets/custom_background.dart';
 import 'package:nafas/features/profile/presentation/widgets/info_Profile.dart';
 import 'package:nafas/features/profile/presentation/widgets/logout_button.dart';
 

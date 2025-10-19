@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:nafas/core/constants/my_colors.dart';
 import 'package:nafas/core/constants/my_string.dart';
 import 'package:nafas/features/auth/presentation/screens/sign_up_page.dart';
 import 'package:nafas/features/auth/presentation/widgets/custom_button.dart';
 import 'package:nafas/features/auth/presentation/widgets/custom_text_field.dart';
+import 'package:nafas/features/home/presentation/screens/first_page.dart';
 import 'package:nafas/features/home/presentation/screens/home_page.dart';
 
 class LoginPage extends StatelessWidget {
@@ -46,7 +48,6 @@ class LoginPage extends StatelessWidget {
                       Text(
                         MyString.welcome,
                         style: TextStyle(
-                          color: Colors.white,
                           fontSize: 32.sp,
                           fontWeight: FontWeight.bold,
                         ),
@@ -84,9 +85,10 @@ class LoginPage extends StatelessWidget {
                       CustomButton(
                         text: "Login",
                         onPressed: () {
-                          Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(builder: (context) => HomePage()),
+                          Get.offAll(
+                            FirstPage(),
+                            transition: Transition.fade,
+                            duration: MyString.kDuration,
                           );
                           print("Login!!!!!!!!!!");
                         },
@@ -97,10 +99,7 @@ class LoginPage extends StatelessWidget {
                         children: [
                           Text(
                             "Don't have an account?",
-                            style: TextStyle(
-                              color: MyColors.white,
-                              fontSize: 15.sp,
-                            ),
+                            style: TextStyle(fontSize: 15.sp),
                           ),
                           TextButton(
                             onPressed: () {

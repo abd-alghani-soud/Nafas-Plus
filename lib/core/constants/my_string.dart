@@ -1,4 +1,7 @@
 class MyString {
+
+  static const kDuration = Duration(milliseconds: 350);
+
   // login page
   static String signIn = 'Sign In';
   static String textUnderSignIn = 'Hi Welcome back , you have been missed';
