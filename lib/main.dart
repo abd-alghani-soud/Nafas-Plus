@@ -4,6 +4,7 @@ import 'package:nafas/core/constants/my_colors.dart';
 import 'package:nafas/features/splash_onboarding/presentation/screens/splash_page.dart';
 import 'package:get/get.dart';
 
+
 void main() {
   runApp(const MyApp());
 }
