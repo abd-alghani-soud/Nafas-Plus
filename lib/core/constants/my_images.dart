@@ -6,4 +6,5 @@ class MyImages {
   static const String p1 = 'assets/images/a.jpg';
   static const String kLogo = 'assets/images/klogo.png';
   static const String nameLogo = 'assets/images/logo_name.jpg';
+  static const String human = 'assets/images/human.png';
 }
