@@ -33,27 +33,43 @@ class RulerPainter extends CustomPainter {
 
       if (value % 25 == 0) {
         lineLen = 40;
-        textStyle = TextStyle(color: activeColor, fontSize: 16, fontWeight: FontWeight.bold);
+        textStyle = TextStyle(
+          color: activeColor,
+          fontSize: 16,
+          fontWeight: FontWeight.bold,
+        );
       } else if (value % 5 == 0) {
         lineLen = 25;
       }
 
       final bool active = value <= currentValue;
-      final Paint p = Paint()
-        ..color = active ? activeColor : lineColor
-        ..strokeWidth = 2
-        ..strokeCap = StrokeCap.round;
+      final Paint p =
+          Paint()
+            ..color = active ? activeColor : lineColor
+            ..strokeWidth = 2
+            ..strokeCap = StrokeCap.round;
 
-      canvas.drawLine(Offset(size.width - lineLen, y), Offset(size.width, y), p);
+      canvas.drawLine(
+        Offset(size.width - lineLen, y),
+        Offset(size.width, y),
+        p,
+      );
 
       if (value % 25 == 0 || i == 0 || i == lines - 1) {
-        final TextPainter tp = TextPainter(text: TextSpan(text: '${value.toInt()} cm', style: textStyle), textDirection: TextDirection.ltr);
+        final TextPainter tp = TextPainter(
+          text: TextSpan(text: '${value.toInt()} cm', style: textStyle),
+          textDirection: TextDirection.ltr,
+        );
         tp.layout();
-        tp.paint(canvas, Offset(size.width - lineLen - tp.width - 5, y - tp.height / 2));
+        tp.paint(
+          canvas,
+          Offset(size.width - lineLen - tp.width - 5, y - tp.height / 2),
+        );
       }
     }
   }
 
   @override
-  bool shouldRepaint(covariant RulerPainter oldDelegate) => oldDelegate.currentValue != currentValue;
+  bool shouldRepaint(covariant RulerPainter oldDelegate) =>
+      oldDelegate.currentValue != currentValue;
 }

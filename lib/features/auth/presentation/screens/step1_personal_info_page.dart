@@ -58,11 +58,8 @@ class _Step1PersonalInfoState extends State<Step1PersonalInfo> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const SizedBox(height: 50),
-          // مؤشر التقدم
           _buildStepIndicator(1, 2),
           const SizedBox(height: 40),
-
-          // حقل الاسم
           CustomTextField(
             controller: _firstNameController,
             label: 'First Name',
@@ -73,8 +70,6 @@ class _Step1PersonalInfoState extends State<Step1PersonalInfo> {
             fillColor: MyColors.backgroundDark2,
           ),
           const SizedBox(height: 40),
-
-          // اختيار الجنس
           const Align(
             alignment: Alignment.centerLeft,
             child: Text(
@@ -105,8 +100,6 @@ class _Step1PersonalInfoState extends State<Step1PersonalInfo> {
             ],
           ),
           const SizedBox(height: 50),
-
-          // زر التالي
           NextButton(onTap: _handleNext),
           const SizedBox(height: 20),
         ],
@@ -125,9 +118,10 @@ class _Step1PersonalInfoState extends State<Step1PersonalInfo> {
             height: 5,
             margin: const EdgeInsets.symmetric(horizontal: 4),
             decoration: BoxDecoration(
-              color: isCurrent || isCompleted
-                  ? MyColors.greenAccent
-                  : MyColors.white.withOpacity(0.3),
+              color:
+                  isCurrent || isCompleted
+                      ? MyColors.greenAccent
+                      : MyColors.white.withOpacity(0.3),
               borderRadius: BorderRadius.circular(10),
             ),
           ),

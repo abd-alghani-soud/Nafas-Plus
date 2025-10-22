@@ -5,8 +5,6 @@ import 'human_silhouette.dart';
 import 'ruler_painter.dart';
 import 'height_indicator.dart';
 
-const Color kActiveColor = MyColors.greenAccent;
-
 class HeightRulerPicker extends StatefulWidget {
   final double initialHeight;
   final ValueChanged<double> onChanged;
@@ -30,18 +28,22 @@ class HeightRulerPicker extends StatefulWidget {
 
 class _HeightRulerPickerState extends State<HeightRulerPicker> {
   late double _currentHeight;
-
-  // مساحة الرسم (المسطرة + المساحة اللي نحط فيها الشكل)
   final double _figureAreaHeight = 350.0;
   final double _rulerPaddingBottom = 50.0;
 
   @override
   void initState() {
     super.initState();
-    _currentHeight = widget.initialHeight.clamp(widget.minHeight, widget.maxHeight);
+    _currentHeight = widget.initialHeight.clamp(
+      widget.minHeight,
+      widget.maxHeight,
+    );
   }
 
-  void _updateHeightFromDrag(DragUpdateDetails details, double containerHeight) {
+  void _updateHeightFromDrag(
+    DragUpdateDetails details,
+    double containerHeight,
+  ) {
     final RenderBox renderBox = context.findRenderObject() as RenderBox;
     final local = renderBox.globalToLocal(details.globalPosition);
 
@@ -54,7 +56,10 @@ class _HeightRulerPickerState extends State<HeightRulerPicker> {
     double newHeight = widget.minHeight + (heightPercentage * range);
 
     setState(() {
-      _currentHeight = newHeight.roundToDouble().clamp(widget.minHeight, widget.maxHeight);
+      _currentHeight = newHeight.roundToDouble().clamp(
+        widget.minHeight,
+        widget.maxHeight,
+      );
       widget.onChanged(_currentHeight);
     });
   }
@@ -69,24 +74,18 @@ class _HeightRulerPickerState extends State<HeightRulerPicker> {
     double heightPercent = (_currentHeight - widget.minHeight) / range;
     heightPercent = heightPercent.clamp(0.0, 1.0);
 
-    // نطاق التكبير: تمنع الصغرى من الاختفاء (30%) وتسمح بالكبيرة وصولاً للـ 100%
     const double minScale = 0.30;
     const double maxScale = 1.0;
     final double scale = minScale + (maxScale - minScale) * heightPercent;
-
     final double iconHeight = _figureAreaHeight * scale;
     final double iconWidth = iconHeight * 0.48;
-
-    // مؤشر يظهر نسبة لارتفاع الأيقونة (يبقى مرتبط بالأيقونة)
     final double indicatorY = heightPercent * iconHeight;
-
     Widget human = HumanSilhouette(
       width: iconWidth,
       height: iconHeight,
       color: MyColors.white,
-      legGapFactor: 0.08, // نَحَّفنا الأرجل هنا (0.08)
+      legGapFactor: 0.08,
     );
-
     if (widget.animated) {
       human = AnimatedContainer(
         duration: const Duration(milliseconds: 120),
@@ -117,16 +116,13 @@ class _HeightRulerPickerState extends State<HeightRulerPicker> {
             child: Stack(
               alignment: Alignment.bottomCenter,
               children: [
-                // الشكل البشري — ثابت في الأسفل مع padding
                 Positioned(bottom: _rulerPaddingBottom, child: human),
-
-                // ==> هنا المسطرة ثابتة: top: 0 وارتفاعها يساوي كامل مساحة الرسم
                 Positioned(
                   right: 0,
-                  top: 0, // ثابت في الأعلى
+                  top: 0,
                   child: Container(
                     width: 50,
-                    height: _figureAreaHeight, // ثابت
+                    height: _figureAreaHeight,
                     alignment: Alignment.centerRight,
                     child: CustomPaint(
                       size: Size(50, _figureAreaHeight),
@@ -135,19 +131,20 @@ class _HeightRulerPickerState extends State<HeightRulerPicker> {
                         max: widget.maxHeight,
                         currentValue: _currentHeight,
                         lineColor: MyColors.white.withOpacity(0.5),
-                        activeColor: kActiveColor,
-                        figureHeight: _figureAreaHeight, // تمرير الارتفاع الثابت للمسطرة
+                        activeColor: MyColors.greenAccent,
+                        figureHeight: _figureAreaHeight,
                       ),
                     ),
                   ),
                 ),
-
-                // المؤشر: نحسب موضعه نسبة لارتفاع الأيقونة (يبقى مرتبط بالرمز)
                 Positioned(
                   bottom: indicatorY + _rulerPaddingBottom,
                   left: 0,
                   right: 0,
-                  child: HeightIndicator(value: _currentHeight, color: kActiveColor),
+                  child: HeightIndicator(
+                    value: _currentHeight,
+                    color: MyColors.greenAccent,
+                  ),
                 ),
               ],
             ),

@@ -11,7 +11,6 @@ class HeightIndicator extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        // بطاقة النص (قيمة الطول)
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
           decoration: BoxDecoration(
@@ -27,11 +26,7 @@ class HeightIndicator extends StatelessWidget {
             ),
           ),
         ),
-
-        // نفصل المساحة بين القيمة والعناصر على اليمين
         const Spacer(),
-
-        // الخط الأخضر القصير على طرف اليمين (عرض 2px، ارتفاع ممكن تعدّله)
         Container(
           width: 2,
           height: 24,
@@ -43,7 +38,6 @@ class HeightIndicator extends StatelessWidget {
 
         const SizedBox(width: 8),
 
-        // الدائرة الصغيرة
         Container(
           width: 16,
           height: 16,

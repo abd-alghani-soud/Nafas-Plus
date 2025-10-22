@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nafas/features/auth/presentation/widgets/human_painter.dart';
 
-
 class HumanSilhouette extends StatelessWidget {
   final double width;
   final double height;

@@ -1,7 +1,7 @@
-
 import 'package:flutter/material.dart';
 
 import 'package:nafas/core/constants/my_colors.dart';
+import 'package:nafas/features/auth/presentation/widgets/custom_button.dart';
 import 'package:nafas/features/auth/presentation/widgets/next_button.dart';
 import 'package:nafas/features/auth/presentation/widgets/number_card.dart';
 
@@ -67,9 +67,10 @@ class _Step2PhysicalInfoState extends State<Step2PhysicalInfo> {
             height: 5,
             margin: const EdgeInsets.symmetric(horizontal: 4),
             decoration: BoxDecoration(
-              color: isCurrent || isCompleted
-                  ? MyColors.greenAccent
-                  : MyColors.white.withOpacity(0.3),
+              color:
+                  isCurrent || isCompleted
+                      ? MyColors.greenAccent
+                      : MyColors.white.withOpacity(0.3),
               borderRadius: BorderRadius.circular(10),
             ),
           ),
@@ -89,7 +90,6 @@ class _Step2PhysicalInfoState extends State<Step2PhysicalInfo> {
 
           _buildStepIndicator(2, 2),
           const SizedBox(height: 20),
-
 
           HeightRulerPicker(
             initialHeight: _height,
@@ -128,7 +128,7 @@ class _Step2PhysicalInfoState extends State<Step2PhysicalInfo> {
             },
           ),
           const SizedBox(height: 30),
-          NextButton(onTap: _handleFinish),
+          CustomButton(onPressed: _handleFinish, text: 'finish'),
           const SizedBox(height: 20),
         ],
       ),
