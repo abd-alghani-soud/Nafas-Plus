@@ -1,6 +1,9 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nafas/features/alarm_clock/presentation/screens/alarm_clock_page.dart';
 import 'package:nafas/features/home/presentation/screens/home_page.dart';
+import 'package:nafas/features/home/presentation/widgets/custom_nav_bar.dart';
 import 'package:nafas/features/profile/presentation/screens/profile_page.dart';
 import 'package:nafas/features/sport/presentation/screens/sport_page.dart';
 
@@ -12,48 +15,55 @@ class FirstPage extends StatefulWidget {
 }
 
 class _FirstPageState extends State<FirstPage> {
-  ValueNotifier<int> selectedIndex = ValueNotifier(0);
+  final ValueNotifier<int> selectedIndex = ValueNotifier(0);
+
+  @override
+  void dispose() {
+    selectedIndex.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return ValueListenableBuilder(
+    return ValueListenableBuilder<int>(
       valueListenable: selectedIndex,
       builder: (context, value, child) {
         return Scaffold(
-          backgroundColor: Colors.black,
+          backgroundColor: const Color(0xFF010101),
           extendBody: true,
-          body: IndexedStack(
-            index: value,
+          body: Stack(
             children: [
-              HomePage(),
-              AlarmClockPage(),
-              SportPage(),
-              ProfilePage(),
+              IndexedStack(
+                index: value,
+                children: const [
+                  HomePage(),
+                  AlarmClockPage(),
+                  SportPage(),
+                  ProfilePage(),
+                ],
+              ),
+              Positioned(
+                left: 0,
+                right: 0,
+                bottom: 0,
+                height: 220.h,
+                child: Container(
+                  decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        Colors.transparent,
+                        Color.fromARGB(40, 20, 20, 20),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
-          bottomNavigationBar: BottomNavigationBar(
-            currentIndex: selectedIndex.value,
-            type: BottomNavigationBarType.fixed,
-            backgroundColor: Colors.black,
-            selectedItemColor: Colors.green,
-            unselectedItemColor: Colors.white,
-            showSelectedLabels: false,
-            showUnselectedLabels: false,
-            onTap: (value) {
-              selectedIndex.value = value;
-            },
-            items: const [
-              BottomNavigationBarItem(icon: Icon(Icons.home), label: 'الصحة'),
-              BottomNavigationBarItem(icon: Icon(Icons.alarm), label: 'المنبه'),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.sports_baseball_rounded),
-                label: 'رياضة',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.person),
-                label: 'بروفايل',
-              ),
-            ],
+          bottomNavigationBar: CustomBottomNav(
+            selectedIndex: selectedIndex,
           ),
         );
       },

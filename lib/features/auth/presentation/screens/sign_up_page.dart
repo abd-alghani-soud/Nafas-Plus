@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nafas/core/constants/my_colors.dart';
 import 'package:nafas/core/constants/my_string.dart';
+import 'package:nafas/features/auth/presentation/screens/complete_info_page.dart';
 import 'package:nafas/features/auth/presentation/screens/complete_information_page.dart';
 import 'package:nafas/features/auth/presentation/widgets/custom_button.dart';
 import 'package:nafas/features/auth/presentation/widgets/custom_text_field.dart';
@@ -24,12 +25,18 @@ class SignUpPage extends StatelessWidget {
             Positioned(
               top: 0,
               left: 0,
-              child: Image(image: AssetImage('assets/images/image1.png')),
+              child: Image(
+                image: AssetImage('assets/images/image1.png'),
+                width: 200,
+              ),
             ),
             Positioned(
               right: 0,
               bottom: 0,
-              child: Image(image: AssetImage('assets/images/image.png')),
+              child: Image(
+                image: AssetImage('assets/images/image.png'),
+                width: 200,
+              ),
             ),
             SingleChildScrollView(
               child: SafeArea(
@@ -106,7 +113,7 @@ class SignUpPage extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => CompleteInformationPage(),
+                              builder: (context) => CompleteInfoPage(),
                             ),
                           );
                           print("Sign up!!!!!!!!!!");
@@ -118,9 +125,7 @@ class SignUpPage extends StatelessWidget {
                         children: [
                           Text(
                             MyString.alreadyHaveAnAccount,
-                            style: TextStyle(
-                              fontSize: 15.sp,
-                            ),
+                            style: TextStyle(fontSize: 15.sp),
                           ),
                           SizedBox(width: 8.w),
                           GestureDetector(

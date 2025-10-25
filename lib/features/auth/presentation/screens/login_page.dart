@@ -7,7 +7,6 @@ import 'package:nafas/features/auth/presentation/screens/sign_up_page.dart';
 import 'package:nafas/features/auth/presentation/widgets/custom_button.dart';
 import 'package:nafas/features/auth/presentation/widgets/custom_text_field.dart';
 import 'package:nafas/features/home/presentation/screens/first_page.dart';
-import 'package:nafas/features/home/presentation/screens/home_page.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
@@ -26,12 +25,18 @@ class LoginPage extends StatelessWidget {
             Positioned(
               top: 0,
               left: 0,
-              child: Image(image: AssetImage('assets/images/image1.png')),
+              child: Image(
+                image: AssetImage('assets/images/image1.png'),
+                width: 200,
+              ),
             ),
             Positioned(
               right: 0,
               bottom: 0,
-              child: Image(image: AssetImage('assets/images/image.png')),
+              child: Image(
+                image: AssetImage('assets/images/image.png'),
+                width: 200,
+              ),
             ),
             SingleChildScrollView(
               child: SafeArea(

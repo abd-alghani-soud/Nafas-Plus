@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:nafas/core/constants/my_images.dart';
 import 'package:nafas/features/auth/presentation/screens/login_page.dart';
 import '../../../../core/constants/my_colors.dart';
 
@@ -47,7 +48,7 @@ class _SplashPageState extends State<SplashPage> {
               top: 0,
               left: 0,
               child: Image.asset(
-                'assets/images/image1.png',
+                MyImages.circle1,
                 fit: BoxFit.cover,
                 width: 120.w,
                 errorBuilder: (context, error, stackTrace) {
@@ -59,7 +60,7 @@ class _SplashPageState extends State<SplashPage> {
               right: 0,
               bottom: 0,
               child: Image.asset(
-                'assets/images/image.png',
+                MyImages.circle2,
                 fit: BoxFit.cover,
                 width: 120.w,
                 errorBuilder: (context, error, stackTrace) {
@@ -74,7 +75,7 @@ class _SplashPageState extends State<SplashPage> {
                 children: [
                   isFading
                       ? Image.asset(
-                            'assets/images/klogo.jpg',
+                            MyImages.kLogo,
                             height: 350.h,
                             fit: BoxFit.contain,
                             errorBuilder: (context, error, stackTrace) {
@@ -96,7 +97,7 @@ class _SplashPageState extends State<SplashPage> {
                           )
                           .fade(duration: 1.seconds)
                       : Image.asset(
-                        'assets/images/klogo.jpg',
+                        MyImages.kLogo,
                         height: 350.h,
                         fit: BoxFit.contain,
                         errorBuilder: (context, error, stackTrace) {
@@ -116,7 +117,7 @@ class _SplashPageState extends State<SplashPage> {
                       ? Text(
                             'Nafas+',
                             style: GoogleFonts.aBeeZee(
-                              fontSize: 34.sp,
+                              fontSize: 44.sp,
                               fontWeight: FontWeight.bold,
                               color: MyColors.greenNeon,
                             ),
@@ -130,7 +131,7 @@ class _SplashPageState extends State<SplashPage> {
                       : Text(
                         'Nafas+',
                         style: GoogleFonts.aBeeZee(
-                          fontSize: 34.sp,
+                          fontSize: 44.sp,
                           fontWeight: FontWeight.bold,
                           color: MyColors.greenNeon,
                         ),

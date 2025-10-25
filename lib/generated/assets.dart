@@ -13,9 +13,10 @@ class Assets {
   static const String iconsSetting = 'assets/icons/setting.svg';
   static const String imagesA = 'assets/images/a.jpg';
   static const String imagesFrame = 'assets/images/Frame.svg';
+  static const String imagesHuman = 'assets/images/human.png';
   static const String imagesImage = 'assets/images/image.ico';
   static const String imagesImage1 = 'assets/images/image1.png';
-  static const String imagesKlogo = 'assets/images/klogo.jpg';
+  static const String imagesKlogo = 'assets/images/klogo.png';
   static const String imagesLogo = 'assets/images/logo.svg';
   static const String imagesLogoName = 'assets/images/logo_name.jpg';
 
