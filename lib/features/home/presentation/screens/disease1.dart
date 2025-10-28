@@ -7,7 +7,7 @@ class Disease1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
     body: Container(
-      color: Colors.pinkAccent,
+      color: Colors.black,
     ),
     );
   }

@@ -30,243 +30,253 @@ class Diseases extends StatelessWidget {
         body:
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 30,horizontal: 70),
-          child: ListView(
-            children: [
+          child: Expanded(
+            child: ListView(
+              children: [
+            
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Disease1()));
+                  },
+                  child: Container(
+                    child: Row(
+                      children: [
+                        SizedBox(width: 20,),
+                        Icon(Icons.favorite),
+                      ],
+                    ),
+                    height: 80,
 
-              GestureDetector(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Disease1()));
-                },
-                child: Container(height: 80,
-                  decoration: BoxDecoration(
-                    color: MyColors.greenAccent,
-                    borderRadius: BorderRadius.circular(40),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.green.withOpacity(0.5),
-                        spreadRadius: 1,
-                        blurRadius: 5,
-                        offset: Offset(0, 0),
-
-                      ),
-                      BoxShadow(
-                        color: Colors.green.withOpacity(0.5),
-                        spreadRadius: 4,
-                        blurRadius: 5,
-                        offset: Offset(0, 0),
-
-                      ),
-                    ],
+                    decoration: BoxDecoration(
+                      color: MyColors.greenAccent,
+                      borderRadius: BorderRadius.circular(40),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.green.withOpacity(0.5),
+                          spreadRadius: 1,
+                          blurRadius: 5,
+                          offset: Offset(0, 0),
+            
+                        ),
+                        BoxShadow(
+                          color: Colors.green.withOpacity(0.5),
+                          spreadRadius: 4,
+                          blurRadius: 5,
+                          offset: Offset(0, 0),
+            
+                        ),
+                      ],
+                    ),
+            
                   ),
-
                 ),
-              ),
-              SizedBox(height: 40,),
-              GestureDetector(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Disease2()));
-                },
-                child: Container(height: 80,
-                  decoration: BoxDecoration(
-                    color: MyColors.greenAccent,
-                    borderRadius: BorderRadius.circular(40),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.green.withOpacity(0.5),
-                        spreadRadius: 4,
-                        blurRadius: 5,
-                        offset: Offset(0, 0),
-
-                      ),
-                      BoxShadow(
-                        color: Colors.green.withOpacity(0.5),
-                        spreadRadius: 4,
-                        blurRadius: 5,
-                        offset: Offset(0, 0),
-
-                      ),
-                    ],
+                SizedBox(height: 40,),
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Disease2()));
+                  },
+                  child: Container(height: 80,
+                    decoration: BoxDecoration(
+                      color: MyColors.greenAccent,
+                      borderRadius: BorderRadius.circular(40),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.green.withOpacity(0.5),
+                          spreadRadius: 4,
+                          blurRadius: 5,
+                          offset: Offset(0, 0),
+            
+                        ),
+                        BoxShadow(
+                          color: Colors.green.withOpacity(0.5),
+                          spreadRadius: 4,
+                          blurRadius: 5,
+                          offset: Offset(0, 0),
+            
+                        ),
+                      ],
+                    ),
+            
                   ),
-
                 ),
-              ),
-              SizedBox(height: 40,),
-              GestureDetector(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Disease3()));
-                },
-                child: Container(height: 80,
-                  decoration: BoxDecoration(
-                    color: MyColors.greenAccent,
-                    borderRadius: BorderRadius.circular(40),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.green.withOpacity(0.5),
-                        spreadRadius: 4,
-                        blurRadius: 5,
-                        offset: Offset(0, 0),
-
-                      ),
-                      BoxShadow(
-                        color: Colors.green.withOpacity(0.5),
-                        spreadRadius: 4,
-                        blurRadius: 5,
-                        offset: Offset(0, 0),
-
-                      ),
-                    ],
+                SizedBox(height: 40,),
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Disease3()));
+                  },
+                  child: Container(height: 80,
+                    decoration: BoxDecoration(
+                      color: MyColors.greenAccent,
+                      borderRadius: BorderRadius.circular(40),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.green.withOpacity(0.5),
+                          spreadRadius: 4,
+                          blurRadius: 5,
+                          offset: Offset(0, 0),
+            
+                        ),
+                        BoxShadow(
+                          color: Colors.green.withOpacity(0.5),
+                          spreadRadius: 4,
+                          blurRadius: 5,
+                          offset: Offset(0, 0),
+            
+                        ),
+                      ],
+                    ),
+            
                   ),
-
                 ),
-              ),
-              SizedBox(height: 40,),
-              GestureDetector(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Disease4()));
-                },
-                child: Container(height: 80,
-                  decoration: BoxDecoration(
-                    color: MyColors.greenAccent,
-                    borderRadius: BorderRadius.circular(40),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.green.withOpacity(0.5),
-                        spreadRadius: 4,
-                        blurRadius: 5,
-                        offset: Offset(0, 0),
-
-                      ),
-                      BoxShadow(
-                        color: Colors.green.withOpacity(0.5),
-                        spreadRadius: 4,
-                        blurRadius: 5,
-                        offset: Offset(0, 0),
-
-                      ),
-                    ],
+                SizedBox(height: 40,),
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Disease4()));
+                  },
+                  child: Container(height: 80,
+                    decoration: BoxDecoration(
+                      color: MyColors.greenAccent,
+                      borderRadius: BorderRadius.circular(40),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.green.withOpacity(0.5),
+                          spreadRadius: 4,
+                          blurRadius: 5,
+                          offset: Offset(0, 0),
+            
+                        ),
+                        BoxShadow(
+                          color: Colors.green.withOpacity(0.5),
+                          spreadRadius: 4,
+                          blurRadius: 5,
+                          offset: Offset(0, 0),
+            
+                        ),
+                      ],
+                    ),
+            
                   ),
-
                 ),
-              ),
-              SizedBox(height: 40,),
-              GestureDetector(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Disease5()));
-                },
-                child: Container(height: 80,
-                  decoration: BoxDecoration(
-                    color: MyColors.greenAccent,
-                    borderRadius: BorderRadius.circular(40),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.green.withOpacity(0.5),
-                        spreadRadius: 4,
-                        blurRadius: 5,
-                        offset: Offset(0, 0),
-
-                      ),
-                      BoxShadow(
-                        color: Colors.green.withOpacity(0.5),
-                        spreadRadius: 4,
-                        blurRadius: 5,
-                        offset: Offset(0, 0),
-
-                      ),
-                    ],
+                SizedBox(height: 40,),
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Disease5()));
+                  },
+                  child: Container(height: 80,
+                    decoration: BoxDecoration(
+                      color: MyColors.greenAccent,
+                      borderRadius: BorderRadius.circular(40),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.green.withOpacity(0.5),
+                          spreadRadius: 4,
+                          blurRadius: 5,
+                          offset: Offset(0, 0),
+            
+                        ),
+                        BoxShadow(
+                          color: Colors.green.withOpacity(0.5),
+                          spreadRadius: 4,
+                          blurRadius: 5,
+                          offset: Offset(0, 0),
+            
+                        ),
+                      ],
+                    ),
+            
                   ),
-
                 ),
-              ),
-              SizedBox(height: 40,),
-              GestureDetector(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Disease6()));
-                },
-                child: Container(height: 80,
-                  decoration: BoxDecoration(
-                    color: MyColors.greenAccent,
-                    borderRadius: BorderRadius.circular(40),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.green.withOpacity(0.5),
-                        spreadRadius: 4,
-                        blurRadius: 5,
-                        offset: Offset(0, 0),
-
-                      ),
-                      BoxShadow(
-                        color: Colors.green.withOpacity(0.5),
-                        spreadRadius: 4,
-                        blurRadius: 5,
-                        offset: Offset(0, 0),
-
-                      ),
-                    ],
+                SizedBox(height: 40,),
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Disease6()));
+                  },
+                  child: Container(height: 80,
+                    decoration: BoxDecoration(
+                      color: MyColors.greenAccent,
+                      borderRadius: BorderRadius.circular(40),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.green.withOpacity(0.5),
+                          spreadRadius: 4,
+                          blurRadius: 5,
+                          offset: Offset(0, 0),
+            
+                        ),
+                        BoxShadow(
+                          color: Colors.green.withOpacity(0.5),
+                          spreadRadius: 4,
+                          blurRadius: 5,
+                          offset: Offset(0, 0),
+            
+                        ),
+                      ],
+                    ),
+            
                   ),
-
                 ),
-              ),
-              SizedBox(height: 40,),
-              GestureDetector(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Disease7()));
-                },
-                child: Container(height: 80,
-                  decoration: BoxDecoration(
-                    color: MyColors.greenAccent,
-                    borderRadius: BorderRadius.circular(40),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.green.withOpacity(0.5),
-                        spreadRadius: 4,
-                        blurRadius: 5,
-                        offset: Offset(0, 0),
-
-                      ),
-                      BoxShadow(
-                        color: Colors.green.withOpacity(0.5),
-                        spreadRadius: 4,
-                        blurRadius: 5,
-                        offset: Offset(0, 0),
-
-                      ),
-                    ],
+                SizedBox(height: 40,),
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Disease7()));
+                  },
+                  child: Container(height: 80,
+                    decoration: BoxDecoration(
+                      color: MyColors.greenAccent,
+                      borderRadius: BorderRadius.circular(40),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.green.withOpacity(0.5),
+                          spreadRadius: 4,
+                          blurRadius: 5,
+                          offset: Offset(0, 0),
+            
+                        ),
+                        BoxShadow(
+                          color: Colors.green.withOpacity(0.5),
+                          spreadRadius: 4,
+                          blurRadius: 5,
+                          offset: Offset(0, 0),
+            
+                        ),
+                      ],
+                    ),
+            
                   ),
-
                 ),
-              ),
-              SizedBox(height: 40,),
-              GestureDetector(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Disease8()));
-                },
-                child: Container(height: 80,
-                  decoration: BoxDecoration(
-                    color: MyColors.greenAccent,
-                    borderRadius: BorderRadius.circular(40),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.green.withOpacity(0.5),
-                        spreadRadius: 4,
-                        blurRadius: 5,
-                        offset: Offset(0, 0),
-
-                      ),
-                      BoxShadow(
-                        color: Colors.green.withOpacity(0.5),
-                        spreadRadius: 4,
-                        blurRadius: 5,
-                        offset: Offset(0, 0),
-
-                      ),
-                    ],
+                SizedBox(height: 40,),
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Disease8()));
+                  },
+                  child: Container(height: 80,
+                    decoration: BoxDecoration(
+                      color: MyColors.greenAccent,
+                      borderRadius: BorderRadius.circular(40),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.green.withOpacity(0.5),
+                          spreadRadius: 4,
+                          blurRadius: 5,
+                          offset: Offset(0, 0),
+            
+                        ),
+                        BoxShadow(
+                          color: Colors.green.withOpacity(0.5),
+                          spreadRadius: 4,
+                          blurRadius: 5,
+                          offset: Offset(0, 0),
+            
+                        ),
+                      ],
+                    ),
+            
                   ),
-
                 ),
-              ),
-              SizedBox(height: 40,),
-
-            ],
+                SizedBox(height: 40,),
+            
+              ],
+            ),
           ),
         ),
       
