@@ -264,7 +264,7 @@ class BmiPage extends StatelessWidget {
                 child: Center(
                   child: Text(
                     'Calculate',
-                    style: TextStyle(color: Colors.white, fontSize: 24),
+                    style: TextStyle(color: Colors.white, fontSize: 25),
                   ),
                 ),
                 decoration: BoxDecoration(color: primaryColor),

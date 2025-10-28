@@ -8,6 +8,7 @@ class Calculate extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('CALCULATE'),
+
       ),
     );
   }
