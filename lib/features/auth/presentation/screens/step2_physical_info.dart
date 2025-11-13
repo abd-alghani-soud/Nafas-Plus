@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:nafas/core/constants/my_colors.dart';
 import 'package:nafas/features/auth/presentation/widgets/custom_button.dart';
-import 'package:nafas/features/auth/presentation/widgets/next_button.dart';
 import 'package:nafas/features/auth/presentation/widgets/number_card.dart';
 
 import 'package:nafas/features/auth/presentation/widgets/height_ruler_picker.dart';
