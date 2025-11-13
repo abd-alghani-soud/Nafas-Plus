@@ -107,7 +107,7 @@ class _SplashPageState extends State<SplashPage> {
                             child: Icon(
                               Icons.broken_image,
                               size: 48.r,
-                              color: MyColors.greenNeon,
+                              color: MyColors.greenAccent,
                             ),
                           );
                         },
@@ -119,7 +119,7 @@ class _SplashPageState extends State<SplashPage> {
                             style: GoogleFonts.aBeeZee(
                               fontSize: 44.sp,
                               fontWeight: FontWeight.bold,
-                              color: MyColors.greenNeon,
+                              color: MyColors.greenAccent,
                             ),
                           )
                           .animate(
@@ -133,7 +133,7 @@ class _SplashPageState extends State<SplashPage> {
                         style: GoogleFonts.aBeeZee(
                           fontSize: 44.sp,
                           fontWeight: FontWeight.bold,
-                          color: MyColors.greenNeon,
+                          color: MyColors.greenAccent,
                         ),
                       ),
                 ],
