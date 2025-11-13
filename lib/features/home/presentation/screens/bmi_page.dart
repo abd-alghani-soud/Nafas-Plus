@@ -1,20 +1,48 @@
 import 'package:flutter/material.dart';
 import 'package:nafas/features/home/presentation/screens/calculate.dart';
 
-class BmiPage extends StatelessWidget {
+class BmiPage extends StatefulWidget {
+  @override
+  State<BmiPage> createState() => _BmiPageState();
+}
+
+class _BmiPageState extends State<BmiPage> {
   double sliderValue = 0;
 
   ValueNotifier<bool> male = ValueNotifier(false);
+
   ValueNotifier<bool> feMale = ValueNotifier(false);
+
   ValueNotifier<double> slideValue = ValueNotifier(150);
+
   ValueNotifier<int> weight = ValueNotifier(40);
+
   ValueNotifier<int> age = ValueNotifier(18);
+  late double bmi = 0;
+  String status = '';
+
+  void showBMIDialog() {
+    double height = slideValue.value.toDouble();
+    double w = weight.value.toDouble();
+
+    bmi = w / ((height / 100) * (height / 100));
+
+    if (bmi < 18.5) {
+      status = 'Fit 💪';
+    } else if (bmi < 25) {
+      status = 'Normal 😊';
+    } else if (bmi < 30) {
+      status = 'Fat 😢';
+    } else {
+      status = 'Very Fat 😒';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     const Color backgroundColor = Color(0xFF010101);
     const Color secondColor = Color(0xFF010101);
-    const Color primaryColor =Color(0xFF4cb050);
+    const Color primaryColor = Color(0xFF4cb050);
     return Scaffold(
       backgroundColor: backgroundColor,
       appBar: AppBar(
@@ -122,7 +150,11 @@ class BmiPage extends StatelessWidget {
                         padding: const EdgeInsets.only(top: 14.0),
                         child: Text(
                           'Height',
-                          style: TextStyle(color: Colors.white, fontSize: 35,fontWeight: FontWeight.bold),
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 35,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                       Text(
@@ -146,7 +178,7 @@ class BmiPage extends StatelessWidget {
             ),
           ),
           Expanded(
-            flex: 3,
+            flex: 4,
             child: Row(
               children: [
                 Expanded(
@@ -184,7 +216,7 @@ class BmiPage extends StatelessWidget {
                               },
                               child: Icon(Icons.remove),
                               shape: CircleBorder(),
-                              backgroundColor:Color(0xFF4cb050),
+                              backgroundColor: Color(0xFF4cb050),
                             ),
                             FloatingActionButton(
                               onPressed: () {
@@ -216,11 +248,17 @@ class BmiPage extends StatelessWidget {
                         ),
                         ValueListenableBuilder(
                           valueListenable: age,
-                          builder:
-                              (BuildContext context, value, Widget? child) {
+                          builder: (
+                            BuildContext context,
+                            value,
+                            Widget? child,
+                          ) {
                             return Text(
                               value.toString(),
-                              style: TextStyle(color: Colors.white, fontSize: 25),
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 25,
+                              ),
                             );
                           },
                         ),
@@ -241,7 +279,7 @@ class BmiPage extends StatelessWidget {
                               },
                               shape: CircleBorder(),
                               child: Icon(Icons.add),
-                              backgroundColor:Color(0xFF4cb050),
+                              backgroundColor: Color(0xFF4cb050),
                             ),
                           ],
                         ),
@@ -254,20 +292,61 @@ class BmiPage extends StatelessWidget {
           ),
           Expanded(
             flex: 1,
-            child: GestureDetector(
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>Calculate()));
-              },
-              child: Container(
-                width: double.infinity,
+            child: TextButton(
+              onPressed: () {
+                showBMIDialog();
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return AlertDialog(
+                      shadowColor: Colors.green,
+                      elevation: 15,
 
+                      backgroundColor: Colors.black,
+
+                      title: Container(
+                        width: 100,
+                        height: 200,
+                        child: Column(
+                          children: [
+                            Text(
+                              'BMI=${bmi.toStringAsFixed(2)}\nStatus=$status',
+                              
+                            ),
+                            SizedBox(
+                              height:20,
+                            ),
+                            ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Color(0xFF4cb050),
+                              ),
+                                onPressed: (){
+
+
+
+
+                                }, child:Text('Ok',style: TextStyle(fontSize: 25,color: Colors.white),))
+                          ],
+                        ),
+                      ),
+                    );
+                  },
+                );
+              },
+
+              child: Container(
+                height: 250,
+                width: 550,
+                decoration: BoxDecoration(
+                  color: Color(0xFF4cb050),
+                  borderRadius: BorderRadius.circular(15),
+                ),
                 child: Center(
                   child: Text(
                     'Calculate',
                     style: TextStyle(color: Colors.white, fontSize: 25),
                   ),
                 ),
-                decoration: BoxDecoration(color: primaryColor),
               ),
             ),
           ),
