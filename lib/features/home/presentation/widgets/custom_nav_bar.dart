@@ -11,7 +11,7 @@ class CustomBottomNav extends StatelessWidget {
 
   final List<IconData> iconList = [
     FontAwesomeIcons.houseMedical,
-    FontAwesomeIcons.alarmClock,
+    FontAwesomeIcons.clock,
     FontAwesomeIcons.personRunning,
     Icons.person,
   ];

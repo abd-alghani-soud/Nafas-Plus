@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:nafas/core/constants/my_icons.dart';
-import 'package:nafas/core/constants/my_string.dart';
+
+import '../../../../core/constants/my_icons.dart';
+import '../../../../core/constants/my_string.dart';
+
 
 class LogoutButton extends StatelessWidget {
   const LogoutButton({super.key});
