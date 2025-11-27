@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: const Size(414, 930),
-      child: GetMaterialApp(
+      child: MaterialApp(
         theme: ThemeData.dark().copyWith(
           scaffoldBackgroundColor: MyColors.backgroundDark2,
         ),

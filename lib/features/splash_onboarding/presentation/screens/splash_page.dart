@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:nafas/core/constants/my_images.dart';
 import 'package:nafas/features/auth/presentation/screens/login_page.dart';
+import 'package:nafas/features/splash_onboarding/presentation/screens/onboarding_page.dart';
 import '../../../../core/constants/my_colors.dart';
 
 class SplashPage extends StatefulWidget {
@@ -31,7 +32,7 @@ class _SplashPageState extends State<SplashPage> {
       if (!mounted) return;
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => LoginPage()),
+        MaterialPageRoute(builder: (context) => OnboardingPage()),
       );
     });
   }

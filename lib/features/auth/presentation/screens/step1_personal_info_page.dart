@@ -1,11 +1,9 @@
-// lib/features/auth/presentation/screens/step1_personal_info.dart
 
 import 'package:flutter/material.dart';
 import 'package:nafas/core/constants/my_colors.dart';
 import 'package:nafas/features/auth/presentation/widgets/custom_button.dart';
 import 'package:nafas/features/auth/presentation/widgets/custom_text_field.dart';
 import 'package:nafas/features/auth/presentation/widgets/gender_card.dart';
-import 'package:nafas/features/auth/presentation/widgets/next_button.dart';
 
 class Step1PersonalInfo extends StatefulWidget {
   final Function(String firstName, bool isMale) onNext;
@@ -102,7 +100,6 @@ class _Step1PersonalInfoState extends State<Step1PersonalInfo> {
           ),
           const SizedBox(height: 50),
           CustomButton(onPressed: _handleNext, text: 'Next'),
-          // NextButton(onTap: _handleNext),
           const SizedBox(height: 20),
         ],
       ),

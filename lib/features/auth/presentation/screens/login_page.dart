@@ -90,10 +90,12 @@ class LoginPage extends StatelessWidget {
                       CustomButton(
                         text: "Login",
                         onPressed: () {
-                          Get.offAll(
-                            FirstPage(),
-                            transition: Transition.fade,
-                            duration: MyString.kDuration,
+                          Navigator.pushAndRemoveUntil(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => FirstPage(),
+                            ),
+                            (Route<dynamic> route) => false,
                           );
                           print("Login!!!!!!!!!!");
                         },
